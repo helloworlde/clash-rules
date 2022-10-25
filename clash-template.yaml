@@ -4,10 +4,8 @@ log-level: {{ default(global.clash.log_level, "error") }}
 external-controller: :9090
 mode: rule
 
-{% if default(request.profile.tracing, "") == "1" %}
 profile:
   tracing: true
-{% endif %}
 
 {% if default(request.clash.dns, "") == "1" %}
 dns:
